@@ -116,7 +116,8 @@
     // submission via this transport.
     function cleanUp() {
       markers.replaceWith(function(idx) {
-        console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
+        // console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
+        console.log 'replacing', files.length, idx
         return files.get(idx);
       });
       form.remove();
@@ -169,7 +170,7 @@
       // clones. This should also avoid introducing unwanted changes to the
       // page layout during submission.
       markers = files.after(function(idx) {
-        return $(this).clone(true).prop("disabled", true);
+        return $(this).clone().prop("disabled", true).attr('id', null);
       }).next();
       files.appendTo(form);
 
