@@ -116,6 +116,7 @@
     // submission via this transport.
     function cleanUp() {
       markers.replaceWith(function(idx) {
+        console.log(files.get(idx), files.get(idx).val());
         return files.get(idx);
       });
       form.remove();
