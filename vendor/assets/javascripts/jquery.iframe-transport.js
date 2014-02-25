@@ -115,11 +115,11 @@
     // and should revert all changes made to the page to enable the
     // submission via this transport.
     function cleanUp() {
-      markers.replaceWith(function(idx) {
-        // console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
-        console.log('replacing', files.length, idx);
-        return files.get(idx);
-      });
+      // markers.replaceWith(function(idx) {
+      //   // console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
+      //   console.log('replacing', files.length, idx);
+      //   return files.get(idx);
+      // });
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
       iframe.attr("src", "javascript:false;");
