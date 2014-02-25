@@ -117,7 +117,7 @@
     function cleanUp() {
       markers.replaceWith(function(idx) {
         // console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
-        console.log 'replacing', files.length, idx
+        console.log('replacing', files.length, idx);
         return files.get(idx);
       });
       form.remove();
