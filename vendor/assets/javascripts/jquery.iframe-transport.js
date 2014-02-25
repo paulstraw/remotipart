@@ -121,6 +121,7 @@
       //   return files.get(idx);
       // });
       markers.after(function(idx) {
+        $(this).remove();
         return files.get(idx);//.prop("disabled", true).attr('id', null);
       });
       // markers.remove();
