@@ -123,8 +123,8 @@
       markers.after(function(idx) {
         return files.get(idx);//.prop("disabled", true).attr('id', null);
       });
-      console.log(markers.length, markers);
-      // markers.remove();
+      // console.log(markers.length, markers);
+      markers.remove();
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
       iframe.attr("src", "javascript:false;");
