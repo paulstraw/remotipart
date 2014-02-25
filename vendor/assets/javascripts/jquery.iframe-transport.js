@@ -124,7 +124,7 @@
         return files.get(idx);//.prop("disabled", true).attr('id', null);
       });
       // console.log(markers.length, markers);
-      markers.remove();
+      $('.ift-marker').remove();
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
       iframe.attr("src", "javascript:false;");
@@ -175,7 +175,7 @@
       // clones. This should also avoid introducing unwanted changes to the
       // page layout during submission.
       markers = files.after(function(idx) {
-        return $(this).clone().prop("disabled", true).attr('id', null);
+        return $(this).clone().prop("disabled", true).attr('id', null).addClass('ift-marker');
       }).next();
       files.appendTo(form);
 
