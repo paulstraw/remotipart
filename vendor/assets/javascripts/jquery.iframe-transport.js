@@ -115,16 +115,9 @@
     // and should revert all changes made to the page to enable the
     // submission via this transport.
     function cleanUp() {
-      // markers.replaceWith(function(idx) {
-      //   // console.log($(this), $(this).val(), files.get(idx), $(files.get(idx)).val());
-      //   console.log('replacing', files.length, idx);
-      //   return files.get(idx);
-      // });
       markers.after(function(idx) {
-        return files.get(idx);//.prop("disabled", true).attr('id', null);
+        return files.get(idx);
       });
-      // console.log(markers.length, markers);
-      $('.ift-marker').remove();
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
       iframe.attr("src", "javascript:false;");
@@ -175,7 +168,7 @@
       // clones. This should also avoid introducing unwanted changes to the
       // page layout during submission.
       markers = files.after(function(idx) {
-        return $(this).clone().prop("disabled", true).attr('id', null).addClass('ift-marker');
+        return $(this).clone().prop("disabled", true).attr('id', null);
       }).next();
       files.appendTo(form);
 
