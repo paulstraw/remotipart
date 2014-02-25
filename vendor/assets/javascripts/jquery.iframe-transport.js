@@ -121,9 +121,9 @@
       //   return files.get(idx);
       // });
       markers.after(function(idx) {
-        $(this).remove();
         return files.get(idx);//.prop("disabled", true).attr('id', null);
       });
+      console.log(markers.length);
       // markers.remove();
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
