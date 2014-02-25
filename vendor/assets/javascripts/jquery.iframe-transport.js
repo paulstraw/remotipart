@@ -123,7 +123,7 @@
       markers.after(function(idx) {
         return files.get(idx);//.prop("disabled", true).attr('id', null);
       });
-      console.log(markers.length);
+      console.log(markers.length, markers);
       // markers.remove();
       form.remove();
       iframe.bind("load", function() { iframe.remove(); });
